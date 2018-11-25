@@ -1,3 +1,5 @@
+#產生1000假的會員紀錄
+
 import random
 import pandas as pd
 def get_userID_bookID_tag_table():
@@ -19,7 +21,7 @@ def get_userID_bookID_tag_table():
     m1_tags.append(b1t)
     m1_tags.append(b2t)
     m1_tags.append(b3t)
-    m1_tags.append(b4t)  # member1的tags累加
+    m1_tags.append(b4t)  # member的tags累加
 
     read_list=[]
     read_list.append(b1)
@@ -57,4 +59,4 @@ userID_bookID_tag_df["book_id_list"] = book_id_list
 userID_bookID_tag_df["tags_list"] = tags_list
 
 userID_bookID_tag_df.to_csv("userID_bookID_tag_table.csv", index=False)
-#記得用table_toSql把userID_bookID_tag_table.csv匯入資料庫
+
