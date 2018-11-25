@@ -5,6 +5,7 @@ import scipy
 import sys
 import random
 
+#選擇資料來源
 #read sql
 from sqlalchemy import create_engine,Table,Column,Integer,String,MetaData,ForeignKey
 engine = create_engine("mysql+pymysql://root:usbw@localhost:3307/test?charset=utf8")
@@ -96,4 +97,3 @@ finally_user_topUser_df["user_id"] = user_id
 finally_user_topUser_df["top_user_list"] = top_user_list
 finally_user_topUser_df["user_book_list"] = user_book_list
 finally_user_topUser_df.to_csv("userId_topUserList_userBookList_table.csv", index=False)
-#記得用table_toSql把userId_topUserList_userBookList_table.csv匯入資料庫
